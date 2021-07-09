@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        campsites: state.campsites,
+        houses: state.houses,
         descriptions: state.descriptions,
         newton: state.newton
     };
@@ -24,17 +24,17 @@ class Main extends Component {
         const HomePage = () => {
             return (
                 <Home 
-                    campsite={this.props.campsites.filter(campsite => campsite.featured)[0]}
+                    house={this.props.houses.filter(house => house.featured)[0]}
                     newt={this.props.newton.filter(newt => newt.featured)[0]}
                 />
             );
         };
 
-        const CampsiteWithId = ({match}) => {
+        const HouseWithId = ({match}) => {
             return (
                 <RealEstateInfo 
-                    campsite={this.props.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
-                    descriptions={this.props.descriptions.filter(description => description.campsiteId === +match.params.campsiteId)}
+                    house={this.props.houses.filter(house => house.id === +match.params.houseId)[0]}
+                    descriptions={this.props.descriptions.filter(description => description.houseId === +match.params.houseId)}
                 />
             );
         };
@@ -44,8 +44,8 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/listings' render={() => <Listings campsites={this.props.campsites} />} />
-                    <Route path='/listings/:campsiteId' component={CampsiteWithId} />
+                    <Route exact path='/listings' render={() => <Listings houses={this.props.houses} />} />
+                    <Route path='/listings/:houseId' component={HouseWithId} />
                     <Route exact path='/contactus' component={Contact} />
                     <Route exact path='/aboutus' component={About} />
                     <Redirect to='/home' />

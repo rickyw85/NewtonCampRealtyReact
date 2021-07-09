@@ -1,4 +1,4 @@
-export const CAMPSITES = [
+export const HOUSES = [
     {
         id: 0,
         name: "The St. Augustine Estate",

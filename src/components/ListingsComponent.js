@@ -2,13 +2,13 @@ import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderListingsItem({campsite}) {
+function RenderListingsItem({house}) {
     return (
         <Card>
-            <Link to={`/listings/${campsite.id}`}>
-                <CardImg width="100%" src={campsite.image} alt={campsite.name} />
+            <Link to={`/listings/${house.id}`}>
+                <CardImg width="100%" src={house.image} alt={house.name} />
                 <CardImgOverlay>
-                    <CardTitle>{campsite.name}</CardTitle>
+                    <CardTitle>{house.name}</CardTitle>
                 </CardImgOverlay>
             </Link>   
         </Card>
@@ -16,10 +16,10 @@ function RenderListingsItem({campsite}) {
 }
 
 function Listings(props) {
-        const listings = props.campsites.map(campsite => {
+        const listings = props.houses.map(house => {
             return (
-                <div key={campsite.id} className="col-md-5 m-1">
-                    <RenderListingsItem campsite={campsite} />
+                <div key={house.id} className="col-md-5 m-1">
+                    <RenderListingsItem house={house} />
                 </div>
             );
         });

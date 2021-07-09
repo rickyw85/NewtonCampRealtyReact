@@ -2,11 +2,11 @@ import React from 'react';
 import { Card, CardImg, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderCampsite({campsite}) {
+function RenderHouse({house}) {
     return (
         <div className='col-md-5 m-1'>
             <Card>
-                <CardImg top src={campsite.image} alt={campsite.name} />
+                <CardImg top src={house.image} alt={house.name} />
             </Card>
         </div>
     )
@@ -35,21 +35,21 @@ function RenderDescriptions ({descriptions}) {
 }    
 
 function RealEstateInfo(props) {
-    if (props.campsite) {
+    if (props.house) {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col">
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/listings">Listings</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
+                            <BreadcrumbItem active>{props.house.name}</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>{props.campsite.name}</h2>
+                        <h2>{props.house.name}</h2>
                         <hr />
                     </div>
                 </div>
                 <div className="row">
-                    <RenderCampsite campsite={props.campsite} />
+                    <RenderHouse house={props.house} />
                     <RenderDescriptions descriptions={props.descriptions} />
                 </div>
             </div>
