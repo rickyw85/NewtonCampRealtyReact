@@ -2,10 +2,10 @@ import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderDirectoryItem({campsite}) {
+function RenderListingsItem({campsite}) {
     return (
         <Card>
-            <Link to={`/directory/${campsite.id}`}>
+            <Link to={`/listings/${campsite.id}`}>
                 <CardImg width="100%" src={campsite.image} alt={campsite.name} />
                 <CardImgOverlay>
                     <CardTitle>{campsite.name}</CardTitle>
@@ -15,11 +15,11 @@ function RenderDirectoryItem({campsite}) {
     );
 }
 
-function Directory(props) {
-        const directory = props.campsites.map(campsite => {
+function Listings(props) {
+        const listings = props.campsites.map(campsite => {
             return (
                 <div key={campsite.id} className="col-md-5 m-1">
-                    <RenderDirectoryItem campsite={campsite} />
+                    <RenderListingsItem campsite={campsite} />
                 </div>
             );
         });
@@ -37,10 +37,10 @@ function Directory(props) {
                 </div>
             </div>
             <div className="row">
-                {directory}
+                {listings}
             </div>
         </div>
     );
 }
 
-export default Directory;
+export default Listings;
