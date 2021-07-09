@@ -1,10 +1,10 @@
 import { CAMPSITES } from '../shared/campsites';
-import { COMMENTS } from '../shared/comments';
+import { DESCRIPTIONS } from '../shared/descriptions';
 import { NEWTON } from '../shared/newton';
 
 export const initialState = {
     campsites: CAMPSITES,
-    comments: COMMENTS,
+    descriptions: DESCRIPTIONS,
     newton: NEWTON
 };
 

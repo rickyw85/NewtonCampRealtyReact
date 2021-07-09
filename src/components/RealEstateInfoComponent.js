@@ -12,17 +12,17 @@ function RenderCampsite({campsite}) {
     )
 }
 
-function RenderComments ({comments}) {
-    if (comments) {
+function RenderDescriptions ({descriptions}) {
+    if (descriptions) {
         return (
             <div className="col-md-5 m-1">
                 <h4 class="text-center">Listing Details</h4>
-                {comments.map(comment => {
+                {descriptions.map(description => {
                     return (
-                        <div key={comment.id}>
-                            <h2 class="text-center">{comment.text}</h2>
-                            <h4 class="text-center">{comment.desc}</h4>
-                            <p class="text-center font-weight-bold">{comment.ldesc}</p>
+                        <div key={description.id}>
+                            <h2 class="text-center">{description.text}</h2>
+                            <h4 class="text-center">{description.desc}</h4>
+                            <p class="text-center font-weight-bold">{description.ldesc}</p>
                         </div>    
                     )
                 })}
@@ -50,7 +50,7 @@ function RealEstateInfo(props) {
                 </div>
                 <div className="row">
                     <RenderCampsite campsite={props.campsite} />
-                    <RenderComments comments={props.comments} />
+                    <RenderDescriptions descriptions={props.descriptions} />
                 </div>
             </div>
         );
