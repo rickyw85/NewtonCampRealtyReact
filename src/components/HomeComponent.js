@@ -14,7 +14,7 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md m-1">
-                    <RenderCard item={props.promotion} />
+                    <RenderCard item={props.newt} />
                 </div>
                 <div class="container-fluid">
                     <div class="row row-content">
