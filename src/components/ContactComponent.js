@@ -104,6 +104,13 @@ class Contact extends Component {
                 </div>
 
                 <div className="row row-content align-items-center text-center">
+                    <div className="col-sm-4">
+                        <h1>Our Address</h1>
+                        <address>
+                            555 Nureal Ave<br />
+                            Lansdale, PA 19446
+                        </address>
+                    </div>
                     <div className="col">
                         <a role="button" className="btn btn-link" href="tel:+12675557890"><i className="fa fa-phone" /> 1-267-555-7890</a><br />
                         <a role="button" className="btn btn-link" href="mailto:Newtoncamprealty@newreal.com"><i className="fa fa-envelope-o" /> Newtoncamprealty@newreal.com</a>
