@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, } from 'reactstrap';
 
 function RenderCard({item}) {
     return (
@@ -14,12 +14,12 @@ function Home(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md m-1">
-                    <RenderCard item={props.newt} />
+                    <RenderCard item={props.promotion} />
                 </div>
                 <div class="container-fluid">
                     <div class="row row-content">
                         <div class="col text-center">
-                            <a href="/index" type="button" class="btn btn-light btn-circle btn-xl">Home</a>{' ', ' '}
+                            <a href="/index" type="button" class="btn btn-light btn-circle btn-xl">Home</a>{' '}
                             <a href="/aboutus" type="button" class="btn btn-light btn-circle btn-xl">About Me</a>  
                         </div>
                     </div>

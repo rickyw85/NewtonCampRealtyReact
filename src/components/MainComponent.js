@@ -13,8 +13,7 @@ const mapStateToProps = state => {
     return {
         campsites: state.campsites,
         comments: state.comments,
-        partners: state.partners,
-        newton: state.newton
+        promotions: state.promotions
     };
 };
 
@@ -26,8 +25,7 @@ class Main extends Component {
             return (
                 <Home 
                     campsite={this.props.campsites.filter(campsite => campsite.featured)[0]}
-                    newt={this.props.newton.filter(newt => newt.featured)[0]}
-                    partner={this.props.partners.filter(partner => partner.featured)[0]}
+                    promotion={this.props.promotions.filter(promotion => promotion.featured)[0]}
                 />
             );
         };
@@ -49,7 +47,7 @@ class Main extends Component {
                     <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/contactus' component={Contact} />
-                    <Route exact path='/aboutus' render={() => <About partners={this.props.partners} /> } />
+                    <Route exact path='/aboutus' component={About} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

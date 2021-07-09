@@ -1,4 +1,4 @@
-export const NEWTON = [
+export const PROMOTIONS = [
     {
         id: 0,
         image: "/assets/images/newton1.jpg",
