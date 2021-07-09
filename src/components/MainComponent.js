@@ -14,7 +14,7 @@ const mapStateToProps = state => {
         campsites: state.campsites,
         comments: state.comments,
         partners: state.partners,
-        promotions: state.promotions
+        newton: state.newton
     };
 };
 
@@ -26,7 +26,7 @@ class Main extends Component {
             return (
                 <Home 
                     campsite={this.props.campsites.filter(campsite => campsite.featured)[0]}
-                    promotion={this.props.promotions.filter(promotion => promotion.featured)[0]}
+                    newt={this.props.newton.filter(newt => newt.featured)[0]}
                     partner={this.props.partners.filter(partner => partner.featured)[0]}
                 />
             );
