@@ -1,0 +1,89 @@
+body {
+  font-family: "Michroma", serif;
+  background-color: gainsboro;
+}
+
+a {
+  font-family: serif;
+}
+
+h1, h2, h3, .card-body>.card-title {
+  font-family: "Michroma", serif;
+}
+
+.btn-circle.btn-xl {
+  background: whitesmoke;
+  text-align: center;
+  width: 149px;
+  height: 149px;
+  border-radius: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none
+}
+
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h2 {
+  color: mediumblue;
+}
+
+.card-img-overlay .card-title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-color: seashell;
+  padding: 20px 0;
+}
+
+.jumbotron {
+  font-family: "Michroma", sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: seashell;
+  color: steelblue;
+}
+
+.jumbotron h2 {
+  color: blue;
+}
+
+.breadcrumb {
+  background-color: mediumblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-dark {
+  background-color: steelblue;
+}
+
+blockquote {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+}
